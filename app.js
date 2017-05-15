@@ -28,7 +28,7 @@ var capitolHill = {
   avgCookies: 4.6
 }
 
-var Alki = {
+var alki = {
   name: 'Alki',
   minCust: 2,
   maxCust: 16,
@@ -44,12 +44,12 @@ function cookiesPerHr(min, max, cookies) {
 }
 
 function listSales(store){
-    var container = document.createElement('ul');
+    var list = document.createElement('ul');
     var listArr = [];
     var cookieArr = [];
     var timeArr = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm:', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm ', '6pm: ', '7pm: ', '8pm: '];
 
-    for (var i=0; i < 13; i++){
+    for (var i=0; i < 15; i++){
       var thisHr = Math.floor(cookiesPerHr(store.minCust, store.maxCust, store.avgCookies));
       console.log('Cookies: ', thisHr);
       listArr.push('<li>' + timeArr[i] + thisHr + '</li>');
@@ -62,5 +62,17 @@ function listSales(store){
     }
 
     console.log("Total cookies: ", totalCookies);
+    listArr.push('<li> Total: ' + totalCookies + '</li>');
 
+    listArr.unshift('<li><h2>'+ store.name +'</h2></li>');
+
+    var fullList = listArr.join('');
+    list.innerHTML = fullList;
+    document.body.appendChild(list);
 }
+
+listSales(firstAndPike);
+listSales(seaTac);
+listSales(seattleCenter);
+listSales(capitolHill);
+listSales(alki);
