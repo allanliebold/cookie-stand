@@ -1,39 +1,39 @@
-// Create object
-var firstAndPike = {
-// Create object properties and set values for each
-  name: '1st & Pike',
-  minCust: 23,
-  maxCust: 65,
-  avgCookies: 6.3
-}
+var storeArr = [
+  firstAndPike = {
+    name: '1st & Pike',
+    minCust: 23,
+    maxCust: 65,
+    avgCookies: 6.3
+  },
 
-var seaTac = {
-  name: 'SeaTac Airport',
-  minCust: 3,
-  maxCust: 24,
-  avgCookies: 1.2
-}
+  seaTac = {
+    name: 'SeaTac Airport',
+    minCust: 3,
+    maxCust: 24,
+    avgCookies: 1.2
+  },
 
-var seattleCenter = {
-  name: 'Seattle Center',
-  minCust: 11,
-  maxCust: 38,
-  avgCookies: 3.7
-}
+  seattleCenter = {
+    name: 'Seattle Center',
+    minCust: 11,
+    maxCust: 38,
+    avgCookies: 3.7
+  },
 
-var capitolHill = {
-  name: 'Capitol Hill',
-  minCust: 20,
-  maxCust: 38,
-  avgCookies: 4.6
-}
+  capitolHill = {
+    name: 'Capitol Hill',
+    minCust: 20,
+    maxCust: 38,
+    avgCookies: 4.6
+  },
 
-var alki = {
-  name: 'Alki',
-  minCust: 2,
-  maxCust: 16,
-  avgCookies: 4.6
-}
+  alki = {
+    name: 'Alki',
+    minCust: 2,
+    maxCust: 16,
+    avgCookies: 4.6
+  }
+];
 
 function cookiesPerHr(min, max, cookies) {
   min = Math.ceil(min);
@@ -71,8 +71,6 @@ function listSales(store){
     document.body.appendChild(list);
 }
 
-listSales(firstAndPike);
-listSales(seaTac);
-listSales(seattleCenter);
-listSales(capitolHill);
-listSales(alki);
+for (var i = 0; i < storeArr.length; i++){
+  listSales(storeArr[i]);
+}
