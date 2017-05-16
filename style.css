@@ -1,0 +1,137 @@
+/* Global styles */
+a {
+  text-decoration: none;
+}
+
+:link, :visited {
+  color: #000;
+}
+
+a:hover {
+  color: #999;
+}
+
+/* App styles */
+
+body{
+  text-align: center;
+  background: #C7A785;
+}
+
+/*
+#C7A785
+#DAB985
+#DAB877
+#776546
+*/
+
+#page-wrap{
+  width: 960px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+header{
+  position: fixed;
+  text-align: center;
+  width: 960px;
+  height: 90px;
+  background: transparent;
+}
+
+header div{
+  height: 100px;
+}
+
+h1{
+  margin-left: 20px;
+  color: #fff;
+  font: 50px impact, sans-serif;
+}
+
+nav {
+  height: 30px;
+  width: 960px;
+  font: 20px impact, sans-serif;
+  background: #fff;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 100px;
+  margin-right: 40px;
+}
+
+section{
+  width: 960px;
+  height: 2000px;
+  padding-top:90px;
+  background: #999;
+}
+
+aside{
+  width: 120px;
+  height: 2000px;
+  float:left;
+}
+
+.banner{
+  width: 720px;
+  height: 300px;
+  margin-top: 20px;
+  text-align: center;
+  float: left;
+}
+
+.block{
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  float: left;
+  padding: 30px;
+}
+
+.anchor{
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+  visibility: hidden;
+}
+
+p{
+  margin:20px;
+}
+
+h2 {
+  font: 30px impact, sans-serif;
+}
+
+h3 {
+  font: 30px sans-serif;
+}
+
+section ul{
+  margin: 10px;
+}
+
+section li{
+  margin: 15px;
+  font: 16px arial, sans-serif;
+}
+
+img {
+  -webkit-filter: drop-shadow(10px 10px 0 white)
+                  drop-shadow(-10px -10px 0 white);
+  filter: drop-shadow(10px 10px 0 white)
+          drop-shadow(-10px -10px 0 white);
+}
+
+.large {
+  width: 720px;
+  height: 300px;
+}
+
+.small {
+  width: 330px;
+  height: 200px;
+}

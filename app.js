@@ -1,33 +1,31 @@
+'use strict';
+
 var storeArr = [
-  firstAndPike = {
+  {
     name: '1st & Pike',
     minCust: 23,
     maxCust: 65,
     avgCookies: 6.3
   },
-
-  seaTac = {
+  {
     name: 'SeaTac Airport',
     minCust: 3,
     maxCust: 24,
     avgCookies: 1.2
   },
-
-  seattleCenter = {
+  {
     name: 'Seattle Center',
     minCust: 11,
     maxCust: 38,
     avgCookies: 3.7
   },
-
-  capitolHill = {
+  {
     name: 'Capitol Hill',
     minCust: 20,
     maxCust: 38,
     avgCookies: 4.6
   },
-
-  alki = {
+  {
     name: 'Alki',
     minCust: 2,
     maxCust: 16,
