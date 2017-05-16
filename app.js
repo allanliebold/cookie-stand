@@ -1,38 +1,25 @@
 'use strict';
 
+function Store(name, minCust, maxCust, avgCookies) {
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookies = avgCookies;
+}
+
 // An array comprised of five objects with the information for each cookie stand location.
-var storeArr = [
-  {
-    name: '1st & Pike',
-    minCust: 23,
-    maxCust: 65,
-    avgCookies: 6.3
-  },
-  {
-    name: 'SeaTac Airport',
-    minCust: 3,
-    maxCust: 24,
-    avgCookies: 1.2
-  },
-  {
-    name: 'Seattle Center',
-    minCust: 11,
-    maxCust: 38,
-    avgCookies: 3.7
-  },
-  {
-    name: 'Capitol Hill',
-    minCust: 20,
-    maxCust: 38,
-    avgCookies: 4.6
-  },
-  {
-    name: 'Alki',
-    minCust: 2,
-    maxCust: 16,
-    avgCookies: 4.6
-  }
-];
+var storeArr = [];
+
+var firstAndPike = new Store('1st & Pike', 23, 65, 6.3);
+storeArr.push(firstAndPike);
+var seaTac = new Store('SeaTac Airport', 3, 24, 1.2);
+storeArr.push(seaTac);
+var seaCen = new Store('Seattle Center', 11, 38, 3.7);
+storeArr.push(seaCen);
+var capHill = new Store('Capitol Hill', 20, 38, 4.6);
+storeArr.push(capHill);
+var alki = new Store('Alki', 2, 16, 4.6);
+storeArr.push(alki);
 
 // A function that will be used to generate a number of cookies sold in an hour. The parameters come from the objects above.
 function cookiesPerHr(min, max, cookies) {
