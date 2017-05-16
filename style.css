@@ -11,11 +11,17 @@ a:hover {
   color: #999;
 }
 
+.data {
+  font: 20px Helvetica;
+}
+
+
 /* App styles */
 
 body{
   text-align: center;
-  background: #C7A785;
+  background: #9DA193;
+  background-image: url(http://www.tripwiremagazine.com/wp-content/uploads/2012/12/seamless-desert-sand-texture.jpg);
 }
 
 /*
@@ -33,9 +39,10 @@ body{
 
 header{
   position: fixed;
-  text-align: center;
+  margin-top: 20px;
   width: 960px;
   height: 90px;
+  text-align: center;
   background: transparent;
 }
 
@@ -64,14 +71,13 @@ nav li {
 
 section{
   width: 960px;
-  height: 2000px;
-  padding-top:90px;
-  background: #999;
+  height: 1800px;
+  background: #C7A785;
 }
 
 aside{
   width: 120px;
-  height: 2000px;
+  height: 1800px;
   float:left;
 }
 
@@ -103,10 +109,12 @@ p{
 }
 
 h2 {
+  font-color: #754734;
   font: 30px impact, sans-serif;
 }
 
 h3 {
+  font-color: #754734;
   font: 30px sans-serif;
 }
 
@@ -115,8 +123,8 @@ section ul{
 }
 
 section li{
-  margin: 15px;
-  font: 16px arial, sans-serif;
+  margin: 10px;
+  font: 17px Georgia;
 }
 
 img {
@@ -127,11 +135,6 @@ img {
 }
 
 .large {
-  width: 720px;
-  height: 300px;
-}
-
-.small {
-  width: 330px;
-  height: 200px;
+  width: 500px;
+  height: 500px;
 }
