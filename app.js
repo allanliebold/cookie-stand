@@ -6,6 +6,14 @@ function Store(name, minCust, maxCust, avgCookies) {
   this.maxCust = maxCust; // dynamic maximum customer property
   this.avgCookies = avgCookies; // dynamic average cookies property
 }
+
+Store.prototype.cookiesPerHr = function(){
+  // Get a random number between the max and the min and store it in a variable called people.
+  var people = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
+  // Multiply people by the avgCookies number from the store object and return the product.
+  return people * this.avgCookies;
+};
+
 // instantiate new Store objects for five stores
 var firstAndPike = new Store('1st & Pike', 23, 65, 6.3);
 var seaTac = new Store('SeaTac Airport', 3, 24, 1.2);
@@ -28,16 +36,6 @@ function createHeader(){
   document.body.appendChild(header_row);
 }
 
-// A function that will be used to generate a number of cookies sold in an hour. The parameters come from the objects above.
-function cookiesPerHr(min, max, cookies) {
-
-// Get a random number between the max and the min and store it in a variable called people.
-  var people = Math.floor(Math.random() * (max - min)) + min;
-  console.log('People: ', people);
-// Multiply people by the avgCookies number from the store object and return the product.
-  return people * cookies;
-}
-
 // The main function of the app. Each store object above is used as the parameter.
 function listSales(store){
 
@@ -50,7 +48,7 @@ function listSales(store){
   listArr.push('<td>' + store.name + '</td>');
 // A for loop that uses the cookiesPerHr function above to get a number of cookies for each business hour, then pushes each number into listArr and cookieArr.
   for (var i=0; i < 15; i++){
-    var thisHr = Math.floor(cookiesPerHr(store.minCust, store.maxCust, store.avgCookies));
+    var thisHr = Math.floor(store.cookiesPerHr());
     console.log('Cookies: ', thisHr);
 // listArr takes the current index from cookiesPerHr/thisHr value and concatenates those into a list item.
     listArr.push('<td>' + thisHr + '</td>');
