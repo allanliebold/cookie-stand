@@ -7,6 +7,24 @@
   </head>
 
   <body>
+    <form id="store_form">
+      <fieldset>
+        <label for="max_cust">Maximum Customers:</label>
+        <input type="text" name="max_cust" placeholder="Enter a number" required>
+      </fieldset>
+
+      <fieldset>
+        <label for="min_cust">Minimum Customers:</label>
+        <input type="text" name="min_cust" placeholder="Enter a number" required>
+      </fieldset>
+
+      <fieldset>
+        <label for="avg_cookies">Avg Cookies Per Customer:</label>
+        <input type="text" name="avg_cookies" placeholder="Enter a number" required>
+      </fieldset>
+
+      <button id="submit-btn" type="submit">Calculate Sales</button>
+    </form>
 
   </body>
   <script src="app.js"></script>
