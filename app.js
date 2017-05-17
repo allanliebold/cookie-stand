@@ -10,7 +10,7 @@ function Store(name, minCust, maxCust, avgCookies) {
 // Creates a prototype method to get the number of cookies sold in an hour at a store
 Store.prototype.cookiesPerHr = function(){
   // Get a random number between the max and the min and store it in a variable called people.
-  var people = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
+  var people = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
   // Multiply people by the avgCookies number from the store object and return the product.
   return people * this.avgCookies;
 };
