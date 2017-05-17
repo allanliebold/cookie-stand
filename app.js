@@ -15,10 +15,22 @@ var alki = new Store('Alki', 2, 16, 4.6);
 // An array comprised of the five Store objects.
 var storeArr = [firstAndPike, seaTac, seaCen, capHill, alki];
 
+function createHeader(){
+  var timeArr = ['Store', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Daily Location Total'];
+  var header_row = [];
+  for (var i=0; i < timeArr.length; i++){
+    header_row.push('<td>' + timeArr[i] + '</td>');
+  }
+  var full_row = header_row.join('');
+  console.log(header_row);
+  header_row = document.createElement('thead');
+  header_row.innerHTML = full_row;
+  document.body.appendChild(header_row);
+}
+
 // A function that will be used to generate a number of cookies sold in an hour. The parameters come from the objects above.
 function cookiesPerHr(min, max, cookies) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+
 // Get a random number between the max and the min and store it in a variable called people.
   var people = Math.floor(Math.random() * (max - min)) + min;
   console.log('People: ', people);
@@ -33,7 +45,7 @@ function listSales(store){
   var listArr = [];
 // And cookieArr stores the numbers of cookies per hour so they can be added together for the total
   var cookieArr = [];
-  var table = document.getElementById('shell');
+//  var table = document.getElementbyId('othershell');
 
   listArr.push('<td>' + store.name + '</td>');
 // A for loop that uses the cookiesPerHr function above to get a number of cookies for each business hour, then pushes each number into listArr and cookieArr.
@@ -57,10 +69,10 @@ function listSales(store){
 
   var new_row = document.createElement('tr');
   new_row.innerHTML = fullList;
-  table.appendChild(new_row);
-
+  document.body.appendChild(new_row);
 }
 
+createHeader();
 // This loops through the array of store objects to run the listSales function for all 5 of them
 for (var i = 0; i < storeArr.length; i++){
   listSales(storeArr[i]);
