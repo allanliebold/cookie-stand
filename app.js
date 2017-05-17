@@ -7,6 +7,7 @@ function Store(name, minCust, maxCust, avgCookies) {
   this.avgCookies = avgCookies; // dynamic average cookies property
 }
 
+// Creates a prototype method to get the number of cookies sold in an hour at a store
 Store.prototype.cookiesPerHr = function(){
   // Get a random number between the max and the min and store it in a variable called people.
   var people = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
@@ -37,7 +38,7 @@ function createHeader(){
 }
 
 // The main function of the app. Each store object above is used as the parameter.
-function listSales(store){
+Store.prototype.listSales = function(){
 
 // Two arrays, one used to create strings which will be inserted into the page's html
   var listArr = [];
@@ -45,10 +46,10 @@ function listSales(store){
   var cookieArr = [];
 //  var table = document.getElementbyId('othershell');
 
-  listArr.push('<td>' + store.name + '</td>');
+  listArr.push('<td>' + this.name + '</td>');
 // A for loop that uses the cookiesPerHr function above to get a number of cookies for each business hour, then pushes each number into listArr and cookieArr.
   for (var i=0; i < 15; i++){
-    var thisHr = Math.floor(store.cookiesPerHr());
+    var thisHr = Math.floor(this.cookiesPerHr());
     console.log('Cookies: ', thisHr);
 // listArr takes the current index from cookiesPerHr/thisHr value and concatenates those into a list item.
     listArr.push('<td>' + thisHr + '</td>');
@@ -68,10 +69,10 @@ function listSales(store){
   var new_row = document.createElement('tr');
   new_row.innerHTML = fullList;
   document.body.appendChild(new_row);
-}
+};
 
 createHeader();
 // This loops through the array of store objects to run the listSales function for all 5 of them
 for (var i = 0; i < storeArr.length; i++){
-  listSales(storeArr[i]);
+  storeArr[i].listSales();
 }
