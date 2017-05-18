@@ -80,6 +80,7 @@ function createTable(){
   console.log('Row is: ', row);
   table.appendChild(row);
 
+// the data array needs to be empty for the next user input, or the data will keep adding on. 
   data = [];
 }
 
