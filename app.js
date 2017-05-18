@@ -15,9 +15,9 @@ function Store(storeName, minCust, maxCust, avgCookies) {
 function formData(e){
   e.preventDefault();
   var storeName = e.target.store_name.value;
-  var minCust = e.target.min_cust.value;
-  var maxCust = e.target.max_cust.value;
-  var avgCookies = e.target.avg_cookies.value;
+  var minCust = parseInt(e.target.min_cust.value);
+  var maxCust = parseInt(e.target.max_cust.value);
+  var avgCookies = parseInt(e.target.avg_cookies.value);
 
   var currentStore = new Store(storeName, minCust, maxCust, avgCookies);
   console.log(currentStore);
@@ -47,7 +47,7 @@ Store.prototype.getSales = function(){
 // A for loop that uses the cookiesPerHr function above to get a number of cookies for each business hour, then pushes each number into listArr and cookieArr.
   for (var i=0; i < 15; i++){
     var thisHr = Math.floor(this.cookiesPerHr());
-    console.log('Cookies: ', thisHr);
+
 // listArr takes the current index from cookiesPerHr/thisHr value and concatenates those into a list item.
     data.push(thisHr);
 // cookieArr just takes the number
@@ -79,6 +79,8 @@ function createTable(){
   row.innerHTML = dataArr;
   console.log('Row is: ', row);
   table.appendChild(row);
+
+  data = [];
 }
 
 form.addEventListener('submit', formData);
