@@ -1,119 +1,151 @@
-/* Global styles */
-a {
-  text-decoration: none;
-}
-
-:link, :visited {
-  color: #000;
-}
-
-a:hover {
-  color: #999;
-}
-
-.data {
-  font: 20px Helvetica;
-}
-
-
-/* App styles */
-
-body{
-  text-align: center;
-  background: #9DA193;
-  background-image: url(http://www.tripwiremagazine.com/wp-content/uploads/2012/12/seamless-desert-sand-texture.jpg);
-}
-
-/*
-#C7A785
-#DAB985
-#DAB877
-#776546
-*/
-
-#page-wrap{
+body {
   width: 960px;
   text-align: left;
   margin: 0 auto;
+  background-image: url(http://www.tripwiremagazine.com/wp-content/uploads/2012/12/seamless-desert-sand-texture.jpg);
 }
 
-header{
-  position: fixed;
-  margin-top: 20px;
+header {
   width: 960px;
-  height: 90px;
   text-align: center;
-  background: transparent;
+  position: fixed;
 }
 
-img {
+.logo {
+  margin-top: -200px;
+  margin-left: 50px;
+  transition: 360ms;
+/* Found on Stack Overflow: http://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts*/
   -webkit-filter: drop-shadow(10px 10px 0 white)
-                  drop-shadow(-10px -10px 0 white);
+              drop-shadow(-10px -10px 0 white);
   filter: drop-shadow(10px 10px 0 white)
-          drop-shadow(-10px -10px 0 white);
+      drop-shadow(-10px -10px 0 white);
+
 }
 
-h1{
-  margin-left: 20px;
-  color: #754730;
-  font: 50px Amaranth, Garamond, serif;
+header:hover .logo {
+  margin-top: 10px;
 }
 
-section{
+
+
+section {
   width: 960px;
-  height: 1500px;
-  padding-top: 300px;
   background: #C7A785;
 }
 
-aside{
-  width: 120px;
-  height: 1500px;
-  float:left;
+#about {
+  height: 650px;
 }
 
-.banner{
-  width: 720px;
-  height: 350px;
+#merchandise {
+  height: 300px;
+}
+
+#community {
+  height: 480px;
+}
+
+aside {
+  height: 100%;
+  width: 80px;
+  float: left;
+}
+
+.banner {
+  height: 50px;
+  width:800px;
   text-align: center;
   float: left;
 }
 
-.block{
-  width: 300px;
-  height: 100px;
-  text-align: center;
+.block {
   float: left;
-  padding: 30px;
+  text-align: center;
+  height: 200px;
+  width: 360px;
+  padding: 0 20px;
 }
 
-.anchor{
-  display: block;
-  height: 90px;
-  margin-top: -90px;
-  visibility: hidden;
+.small-block {
+  float: left;
+  height: 200px;
+  width: 200px;
 }
 
-p{
-  margin:20px;
-  font: 17px Georgia, sans-serif;
+.med-block {
+  float: left;
+  height: 200px;
+  width: 470px;
+  padding: 0 20px;
 }
 
-.quote {
-  font: 16px Garamond, serif;
+.large-block{
+  float: left;
+  height: 240px;
+  width: 790px;
+  text-align: center;
+}
+
+.filler {
+  float: left;
+  height: 200px;
+  width: 90px;
+}
+
+.half {
+  height:100px;
+}
+
+.small-img {
+  height: 200px;
+  width: 200px;
+}
+
+.large-img {
+  width: 400px;
 }
 
 h2 {
-  color: #754730;
-  font: 30px Helvetica, serif;
+  font: 30px helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-section ul{
-  margin: 10px;
+h3 {
+  font: 26px helvetica, sans-serif;
 }
 
-section li{
-  margin: 10px;
-  color: #000;
-  font: 17px Georgia;
+p {
+  font: 16px Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+li {
+  font: 16px Arial, sans-serif;
+}
+
+.quote {
+  padding: 20px;
+  font: italic 16px serif;
+}
+
+footer {
+  height: 300px;
+  background: #446;
+}
+
+.waves{
+  position: absolute;
+  width: 960px;
+  top: 1395px;
+}
+
+.waves div {
+  width: 96px;
+  height: 80px;
+  border-radius: 100px;
+  background: #C7A785;
+  float:left;
+  top: 80px;
 }
