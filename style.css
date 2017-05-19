@@ -6,9 +6,28 @@ body {
 }
 
 header {
-  height: 90px;
-  background: gray;
+  width: 960px;
+  text-align: center;
+  position: fixed;
 }
+
+.logo {
+  margin-top: -200px;
+  margin-left: 50px;
+  transition: 360ms;
+/* Found on Stack Overflow: http://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts*/
+  -webkit-filter: drop-shadow(10px 10px 0 white)
+              drop-shadow(-10px -10px 0 white);
+  filter: drop-shadow(10px 10px 0 white)
+      drop-shadow(-10px -10px 0 white);
+
+}
+
+header:hover .logo {
+  margin-top: 10px;
+}
+
+
 
 section {
   width: 960px;
@@ -119,7 +138,7 @@ footer {
 .waves{
   position: absolute;
   width: 960px;
-  top: 1470px;
+  top: 1395px;
 }
 
 .waves div {
