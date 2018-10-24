@@ -15,7 +15,7 @@ Store.prototype.cookiesPerHr = function() {
   return people * this.avgCookies;
 };
 
-// instantiate new Store objects for five stores
+// Instantiate new Store objects for five stores
 var firstAndPike = new Store('1st & Pike', 23, 65, 6.3);
 var seaTac = new Store('SeaTac Airport', 3, 24, 1.2);
 var seaCen = new Store('Seattle Center', 11, 38, 3.7);
