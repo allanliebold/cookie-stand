@@ -27,6 +27,7 @@ var alki = new Store('Alki', 2, 16, 4.6);
 // This will start empty and I'll add an updateStoreArr function that will push any new Store objects into storeArr.
 var storeArr = [firstAndPike, seaTac, seaCen, capHill, alki];
 
+// A function used to generate the table header. This can definitely be refactored. 
 function createHeader() {
   var timeArr = ['Store', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Daily Location Total'];
   var header_row = [];
