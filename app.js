@@ -15,14 +15,15 @@ Store.prototype.cookiesPerHr = function() {
   return people * this.avgCookies;
 };
 
-// Instantiate new Store objects for five stores
+// Instantiate new Store objects for five stores. Note: I plan to get rid of these hard coded objects and 
+// replace this with a function to accept user input to create stores.
 var firstAndPike = new Store('1st & Pike', 23, 65, 6.3);
 var seaTac = new Store('SeaTac Airport', 3, 24, 1.2);
 var seaCen = new Store('Seattle Center', 11, 38, 3.7);
 var capHill = new Store('Capitol Hill', 20, 38, 4.6);
 var alki = new Store('Alki', 2, 16, 4.6);
 
-// An array comprised of the five Store objects.
+// An array comprised of the five Store objects. 
 var storeArr = [firstAndPike, seaTac, seaCen, capHill, alki];
 
 function createHeader() {
