@@ -21,6 +21,7 @@ var seaTac = new Store('SeaTac Airport', 3, 24, 1.2);
 var seaCen = new Store('Seattle Center', 11, 38, 3.7);
 var capHill = new Store('Capitol Hill', 20, 38, 4.6);
 var alki = new Store('Alki', 2, 16, 4.6);
+
 // An array comprised of the five Store objects.
 var storeArr = [firstAndPike, seaTac, seaCen, capHill, alki];
 
