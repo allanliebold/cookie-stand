@@ -24,6 +24,7 @@ var capHill = new Store('Capitol Hill', 20, 38, 4.6);
 var alki = new Store('Alki', 2, 16, 4.6);
 
 // An array comprised of the five Store objects. 
+// This will start empty and I'll add an updateStoreArr function that will push any new Store objects into storeArr.
 var storeArr = [firstAndPike, seaTac, seaCen, capHill, alki];
 
 function createHeader() {
