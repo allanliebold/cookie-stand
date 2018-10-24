@@ -24,7 +24,7 @@ var alki = new Store('Alki', 2, 16, 4.6);
 // An array comprised of the five Store objects.
 var storeArr = [firstAndPike, seaTac, seaCen, capHill, alki];
 
-function createHeader(){
+function createHeader() {
   var timeArr = ['Store', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Daily Location Total'];
   var header_row = [];
   for (var i=0; i < timeArr.length; i++){
