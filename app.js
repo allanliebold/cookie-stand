@@ -1,4 +1,5 @@
 'use strict';
+// This file is used by sales.html to create a table of sales data
 // Construct Store object
 function Store(name, minCust, maxCust, avgCookies) {
   this.name = name; // dynamic name property
